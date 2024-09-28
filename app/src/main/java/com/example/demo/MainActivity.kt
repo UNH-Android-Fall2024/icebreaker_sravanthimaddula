@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private val className = "android-fall24"
     private val db = Firebase.firestore
     private var TAG = "IcebreakerF24-TAG"
-    private var questionBank: MutableList<Questions>? = arrayListOf()
+    private var questionBank: MutableList<questions>? = arrayListOf()
 
     // Override the onCreate Fucntion and do stuff
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnSubmit.setOnClickListener {
             writeStudentToFirebase()
-            binding.txtQuestion.text = ""
+            binding.txtquestion.text = ""
 
         }
     }
