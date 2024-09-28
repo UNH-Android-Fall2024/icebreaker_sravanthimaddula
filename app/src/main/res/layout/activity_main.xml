@@ -8,29 +8,119 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:layout_marginTop="200sp"
+        android:id="@+id/Header1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Icebreaker"
+        android:text="@string/Header1"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        />
 
     <TextView
-        android:id="@+id/Header2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Built with Android Studio"
+        android:text="@string/Header2"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:textStyle="bold"
+        android:id="@+id/Header2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Header1"
+        />
+
+    <EditText
+        android:id="@+id/txtFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/txt_first_name"
+        android:textAlignment="center"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Header2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/Header2" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLastName"
+        android:hint="@string/txt_last_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFirstName"
+        android:textSize="14sp"
+        android:ems="10"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPrefName"
+        android:hint="@string/txt_pref_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtLastName"
+        android:textSize="14sp"
+        android:ems="10"
+        android:textAlignment="center"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get a New Random Question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPrefName"
+        android:layout_marginTop="20sp"
+        android:textSize="18sp"
+        android:id="@+id/btnSetRandomQuestion"
+        android:backgroundTint="@android:color/transparent"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnSetRandomQuestion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/txtQuestion"
+        tools:text="What is your favorite flavor of ice cream?"
+        />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtAnswer"
+        android:hint="@string/answer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtQuestion"
+        android:textSize="14sp"
+        android:ems="10"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:text="SUBMIT"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAnswer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
