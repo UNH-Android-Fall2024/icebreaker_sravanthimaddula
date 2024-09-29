@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Demo</string>
+    <string name="icebreaker">Icebreaker</string>
+    <string name="build_using_android_studio">Build using Android Studio</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="prefname">PrefName</string>
+    <string name="answer">Answer</string>
 </resources>
